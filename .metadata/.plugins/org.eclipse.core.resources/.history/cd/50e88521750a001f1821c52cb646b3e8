@@ -1,0 +1,27 @@
+package testcases;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+import org.openqa.selenium.Keys;
+
+public class mytestcases extends BaseClass{
+	
+	@Test
+	public void testonelogin(){
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		
+//		WebElement  nextButton = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.ImageView"));
+//        nextButton.click();
+        WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.ImageView")));
+        nextButton.click();
+        
+        System.out.println("Test1 completed");
+	}
+
+}
